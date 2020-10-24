@@ -17,7 +17,7 @@ logger.addHandler(ch)
 
 def main():
     # DataLoader: to be replaced with S3
-    x, y = load_mnist('data/mnist', kind='t10k')
+    x, y = load_mnist('data/mnist', kind='train')
 
     # Train: to be replaced with lambda
     model = train(x, y)

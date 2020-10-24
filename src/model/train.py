@@ -1,10 +1,9 @@
 from sklearn.base import BaseEstimator
-from sklearn.ensemble import GradientBoostingRegressor, GradientBoostingClassifier
-import numpy as np
-import logging
-
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 
+import numpy as np
+import logging
 logger = logging.getLogger()
 
 
