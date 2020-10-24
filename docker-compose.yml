@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+  localstack:
+    image: localstack/localstack
+    network_mode: bridge
+
+    ports:
+      - "4566-4599:4566-4599"
+    environment:
+      - DEFAULT_REGION=eu-central-1
+      - SERVICES=serverless, s3 # pre-defined ensemble that perfectly suits us
+    volumes:
+      - ".tmp:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
