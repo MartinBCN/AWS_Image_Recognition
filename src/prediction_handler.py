@@ -4,7 +4,6 @@ import logging
 import os
 import tempfile
 from pathlib import Path
-
 import boto3
 import joblib
 logger = logging.getLogger()
