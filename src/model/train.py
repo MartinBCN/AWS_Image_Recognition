@@ -29,7 +29,7 @@ def train(x: np.array, y: np.array) -> BaseEstimator:
     # Split into train and validation set
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.9, random_state=42)
     logger.info(f'Shape x_train: {x_train.shape}, shape y_train: {y_train.shape}')
-    logger.info(f'Shape x_test: {x_train.shape}, shape y_test: {y_test.shape}')
+    logger.info(f'Shape x_test: {x_test.shape}, shape y_test: {y_test.shape}')
     logger.info(f'Classes: {np.unique(y)}')
 
     # Fit our model and check the validation score

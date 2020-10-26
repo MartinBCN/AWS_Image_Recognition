@@ -68,7 +68,7 @@ def mnist_s3(kind: str = 'train') -> (np.array, np.array):
     n = obj.get()['Body'].read()
     gzipfile = gzip.GzipFile(fileobj=BytesIO(n))
     content = gzipfile.read()
-    images = np.frombuffer(content, dtype=np.uint8, offset=8)
+    images = np.frombuffer(content, dtype=np.uint8, offset=16).reshape(len(labels), 784)
 
     return images, labels
 
