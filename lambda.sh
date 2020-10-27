@@ -4,14 +4,14 @@
 
 # Required: apt-get install python3-venv
 # 1) External dependencies
-virtualenv v-env
-#python3 -m venv v-env
+#virtualenv v-env
+python3 -m venv v-env
 source v-env/bin/activate
-pip install -r requirements.txt
+pip install -r requirements.txt --ignore-installed
 deactivate
 
 # zip up
-cd v-env/lib/python3.6/site-packages
+cd v-env/lib/python3.7/site-packages
 zip -r9 ${OLDPWD}/dependencies.zip .
 
 cd $OLDPWD
