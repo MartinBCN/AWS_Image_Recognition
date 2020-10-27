@@ -28,6 +28,15 @@ jobs:
       - name: Test Secrets
         run: echo ${{ secrets.TEST }} should be testvalue
 
+  lambda:
+    runs-on:
+      amazonlinux:latest
+    steps:
+      run: |
+        virtualenv v-env
+        source v-env/bin/activate
+
+
   # Unit Testing
   test:
     runs-on: ubuntu-latest
