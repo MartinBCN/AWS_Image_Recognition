@@ -32,9 +32,12 @@ jobs:
     runs-on:
       amazonlinux:latest
     steps:
-      run: |
-        virtualenv v-env
-        source v-env/bin/activate
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - name: Build packages
+        run: |
+          virtualenv v-env
+          source v-env/bin/activate
 
 
   # Unit Testing
