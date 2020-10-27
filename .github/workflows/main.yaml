@@ -26,7 +26,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Test Secrets
-        run: echo $TEST should be testvalue
+        run: echo ${{ secrets.TEST }} should be testvalue
 
   # Unit Testing
   test:
