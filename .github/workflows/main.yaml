@@ -29,8 +29,8 @@ jobs:
         run: echo ${{ secrets.TEST }} should be testvalue
 
   lambda:
-    runs-on:
-      amazonlinux:latest
+    runs-on: ubuntu-latest
+    container: amazonlinux:latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
