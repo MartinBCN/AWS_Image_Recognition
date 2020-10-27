@@ -33,7 +33,7 @@ jobs:
     container: amazonlinux:latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+#      - uses: actions/checkout@v2
       - name: Build packages
         run: |
           virtualenv v-env
