@@ -16,8 +16,8 @@ before_install:
   - docker build -t martincleven/awsimage -f Dockerfile .
 
 script:
-#    - docker run -e CI=true martincleven/awsimage pytest ./tests
-  - pytest
+    - docker run -e CI=true martincleven/awsimage pytest /app/tests
+#  - pytest
 
 #deploy:
 #    provider: elasticbeanstalk
