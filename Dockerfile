@@ -1,5 +1,5 @@
 FROM amazonlinux:latest
 
-WORKDIR '/app'
+WORKDIR '.'
 
-COPY . /app
+COPY . .

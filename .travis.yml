@@ -16,7 +16,7 @@ before_install:
   - docker build -t martincleven/awsimage -f Dockerfile .
 
 script:
-    - docker run -e CI=true martincleven/awsimage pytest /app/tests
+    - docker run -e CI=true martincleven/awsimage pytest ./tests
 #  - pytest
 
 #deploy:
